@@ -17,7 +17,7 @@ class operation
 	{
 		$this->dbCon = mysqli_connect($this->host, $this->dbUser, $this->dbPass, $this->dbName);
 		if(mysqli_connect_errno($this->dbCon)){
-			throw new Exception("Database Connection Failed!");
+		 die("Database configuration needed! Read carefully readme.md or readme.html file.");
 		}
 	}
 	public function dataStore($table, array $data){
@@ -91,7 +91,9 @@ class operation
 	}
 
   function __destruct() {
-    mysqli_close($this->dbCon);
+    if($this->dbCon){
+      mysqli_close($this->dbCon);
+    }
   }
 }
 ?>
