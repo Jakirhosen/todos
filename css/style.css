@@ -1,0 +1,227 @@
+		body{
+		background: #eee;
+		}
+		.card-customization {
+		background: #fff;
+		width: 100% !important;
+		/*padding-bottom: 40px;*/
+		border-radius: 2px !important;
+		position: relative;
+		max-height: 400px;
+		}
+		.card-customization::before {
+		content: '';
+		position: absolute;
+		width: 98%;
+		height: 7px;
+		background: #fff;
+		border-bottom: 1px solid #d9d9d9;
+		left: 7px;
+		bottom: -13px;
+		z-index: -2;
+		border-radius: 2px;
+		}
+		.card-customization::after {
+		content: '';
+		position: absolute;
+		width: 99%;
+		height: 7px;
+		background: #fff;
+		border-bottom: 1px solid #d9d9d9;
+		left: 3px;
+		bottom: -7px;
+		z-index: -1;
+		border-radius: 2px;
+		}
+		.card-customization .card-content{
+		width: 100%;
+		padding: 10px;
+		max-height: 300px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		}
+		.card-customization .card-content .custom-row {
+		font-size: 22px;
+		color: #555;
+		padding: 5px 1px;
+		border-bottom: 1px solid #f4f0f0;
+		position: relative;
+		cursor: pointer;
+		}
+        .card-customization .card-content .custom-row .row-hidden-btn {
+	    position: absolute;
+	    top: 0;
+	    right: -75px;
+	    transition: all .4s;
+        }
+        .card-customization .card-content .custom-row:hover .row-hidden-btn{
+        	right: 0px;
+        }
+
+        .card-customization .card-content .custom-row .row-hidden-btn a {
+          text-decoration: none;
+          margin-right: 10px;
+          font-size: 16px;
+
+        }
+        .card-customization .card-content .custom-row .row-hidden-btn a:last-child{
+        	margin-right: 0px;
+        }
+		.custom-check-container {
+		display: block;
+		position: relative;
+		padding-left: 36px;
+		cursor: pointer;
+		font-size: 24px;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		line-height: 24px;
+		}
+		/* Hide the browser's default checkbox */
+		.custom-check-container input[type=checkbox] {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+		}
+		.checkmark {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 28px;
+		width: 28px;
+		background-color: #eee;
+		border-radius: 50%;
+		}
+		/* On mouse-over, add a grey background color */
+		.custom-check-container:hover input ~ .checkmark {
+		background-color: #eee;
+		}
+		/* When the checkbox is checked, add a blue background */
+		.custom-check-container input:checked ~ .checkmark {
+		background-color: #d9d9d9;
+		}
+		/* Create the checkmark/indicator (hidden when not checked) */
+		.checkmark:after {
+		content: "";
+		position: absolute;
+		display: none;
+		}
+		/* Show the checkmark when checked */
+		.custom-check-container input:checked ~ .checkmark:after {
+		display: block;
+		}
+		.custom-check-container .checkmark::after {
+		left: 11px;
+		top: 5px;
+		width: 7px;
+		height: 15px;
+		border: solid #239f00;
+		border-width: 0 3px 3px 0;
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+		}
+		.todo-form{
+		position: relative;
+		border-bottom: 1px solid #d9d9d9;
+		}
+		.todo-form .todo-field {
+		width: 100%;
+		padding: 8px 70px 8px 40px;
+		font-size: 22px;
+		color: #555;
+		border: none;
+		}
+		.todo-form button{
+		position: absolute;
+		right: 0px;
+		background: transparent;
+		border: none;
+		font-size: 30px;
+		padding: 6.5px 16px;
+		color: #d9d9d9;
+		font-weight: bolder;
+		line-height: 32px;
+		transition: all 1s;
+		text-align: center;
+		}
+		.todo-form button:hover{
+		background: #ddd;
+		color: #999191;
+		}
+		.left-icon {
+		position: absolute;
+		left: 0px;
+		background: transparent;
+		border: none;
+		font-size: 26px;
+		padding: 6px 8px;
+		color: #d9d9d9;
+		font-weight: bolder;
+		line-height: 32px;
+		transition: all 1s;
+		text-align: center;
+		top: 0px;
+		}
+		.custom-btn {
+		color: #555;
+		font-size: 13px;
+		font-weight: bold;
+		padding: 0px;
+		float: left;
+		margin-left: 25px;
+		text-align: center;
+		}
+		
+		.custom-btn.active {
+		color: #007bff;
+		text-decoration: underline;
+		}
+
+		.clear-completed{
+		color: #555;
+		font-size: 13px;
+		font-weight: bold;
+		padding: 0px;
+		}
+
+		.custom-tab{
+			display: none;
+		}
+		.custom-tab.active{
+			display: block;
+		}
+		.completed-todos{
+			color: #d9d9d9;
+            text-decoration: line-through;
+		}
+.value {
+	width: 90%;
+	padding: 2px 10px 6px 9px;
+	font-size: 22px;
+	color: #555;
+	border-bottom: 1px solid #d9d9d9;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+        .card-customization .card-content .custom-row .save-cancel-button {
+	    position: absolute;
+	    top: 0;
+	    right: 0px;
+	    transition: all .4s;
+        }
+        .card-customization .card-content .custom-row .save-cancel-button a {
+          text-decoration: none;
+          margin-right: 10px;
+          font-size: 16px;
+
+        }
+        .card-customization .card-content .custom-row .save-cancel-button a:last-child{
+        	margin-right: 0px;
+        }
