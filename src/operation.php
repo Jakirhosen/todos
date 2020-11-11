@@ -8,9 +8,9 @@ namespace Todos;
 class operation 
 {
   private $host = 'localhost';
-  private $dbUser = 'root';
-  private $dbPass = '';
-  private $dbName = 'dev';
+  private $dbUser = ''; //enter your database username here
+  private $dbPass = ''; //enter your database password here
+  private $dbName = ''; //enter your database name here
   private $dbCon;
   
 	function __construct()
